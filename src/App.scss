@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+.board {
+  margin: 100px auto;
+  width: 500px;
+  &__title {
+    text-align: center;
+  }
+  &__input {
+    padding: 7px;
+    color: gray;
+    width: 100%;
+    border: #808080a1 2px solid;
+    border-radius: 3px;
+  }
+  &__submit {
+    padding: 8px 14px;
+    background-color: gray;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    margin: 16px 0;
+  }
+  &__result {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__err {
+    animation-name: aniError;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes aniError {
+  0%   {transform: rotate(0);}
+  25%  {transform: rotate(4deg);}
+  50%  {transform: rotate(-4deg);}
+  75%  {transform: rotate(4deg);}
+  100% {transform: rotate(-4deg);}
+}
